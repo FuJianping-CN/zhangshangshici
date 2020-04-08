@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/about/about",
+    "pages/preduce/preduce",
+    "pages/developer/developer",
+    "pages/recommend/recommend",
+    "pages/search/search",
+    "pages/poem/audio/index",
+    "pages/poem/detail/index",
+    "pages/poem/index/index",
+    "pages/type/type",
+    "pages/sentence/index",
+    "pages/poet/index/index",
+    "pages/poet/detail/index",
+    "pages/theme/index",
+    "pages/poem/dynasty_poem/index",
+    "pages/poet/dynasty_poet/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#089858",
+    "navigationBarTitleText": "掌上诗词",
+    "navigationBarTextStyle": "whitle",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#9DACB7F",
+    "selectedColor": "#78C652",
+    "borderStyle": "white",
+    "backgroundColor": "",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/tabBar2/home.png",
+        "selectedIconPath": "images/tabBar2/home-selected.png"
+      },
+      {
+        "pagePath": "pages/recommend/recommend",
+        "text": "匹配",
+        "iconPath": "images/tabBar2/match.png",
+        "selectedIconPath": "images/tabBar2/match-selected.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "搜索",
+        "iconPath": "images/tabBar2/search.png",
+        "selectedIconPath": "images/tabBar2/search-selected.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于",
+       "iconPath": "images/tabBar2/about.png",
+      "selectedIconPath": "images/tabBar2/about-selected.png"
+      }
+    ]
+  }
+}

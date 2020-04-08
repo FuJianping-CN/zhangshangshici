@@ -1,0 +1,4 @@
+/* pages/preduce/preduce.wxss */
+.home-page {
+  padding: 10px;
+}

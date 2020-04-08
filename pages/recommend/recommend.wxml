@@ -1,0 +1,65 @@
+<view class='homePage'>
+  <view>
+    <text class='tip'>下拉刷新为您匹配最佳诗词\n\n</text>
+  </view>
+  <navigator></navigator>
+  <view class='content'>
+
+    <view>
+      <view class='details'>为您推荐的最佳诗句：</view>
+      <view class='dividerLine'></view>
+      <view style='color:#DF013A'>{{gushi}}</view>\n
+    </view>
+    <view class='divider'></view>
+
+    <view class='tag item'>
+      <text class='content1'>关键词匹配</text>
+      <view class='contents'>
+        <navigator url="/pages/poem/index/index?type=tag&keyWord={{item}}" hover-class="navigator-hover" class="poem-item tag" wx:for="{{matchTags}}" wx:key="*.this">
+          <view class="poem-title">{{item}}</view>
+        </navigator>
+      </view>
+    </view>
+
+
+
+
+
+
+    <view class='divider'></view>
+    <view>
+      <view class='details'>诗句来源详情</view>
+      <view class='dividerLine1'></view>
+    </view>
+    <view>
+      <text class='content1'>名称</text>
+      <view class='dividerLine'></view>{{title}}\n
+    </view>
+
+    <view class='divider'></view>
+    <view>
+      <text class='content1'>朝代</text>
+      <view class='dividerLine'></view>
+      {{dynasty}}\n
+    </view>
+    <view class='divider'></view>
+    <view>
+      <text class='content1'>作者</text>
+      <view class='dividerLine'></view>{{author}}\n
+    </view>
+    <view class='divider'></view>
+    <view>
+      <text class='content1'>全诗内容</text>
+      <view class='dividerLine'></view>{{content}}\n
+    </view>
+    <view class='divider'></view>
+    <view style='padding-bottom:60px;'>
+      <text class='content1'>诗词翻译</text>
+      <view class='dividerLine'></view>{{translate}}\n
+    </view>
+
+
+
+  </view>
+
+</view>

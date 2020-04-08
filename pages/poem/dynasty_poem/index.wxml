@@ -1,0 +1,35 @@
+<!--pages/poem/index/index.wxml-->
+<view class="home-content">
+
+  <view class="workbench">
+    <view class='list'>
+      <view wx:for="{{types}}" wx:key="id">
+        <view class="items">
+          <button size='mini' bindtap='selectByDynastyAndType' id="{{item}}">{{item}}</button>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="divider"></view>
+  <view class="nav-breadcrumb weui-flex">
+    <view class="item type" wx-if='{{is_search}}'>{{_keyWord}}</view>
+    <view class="item total">共 {{total}} 条结果</view>
+  </view>
+  <view class='divider'></view>
+
+<!-- 查询结果 -->
+  <view class="page list">
+    <view class="page__bd">
+      <navigator url="/pages/poem/detail/index?id={{item.id}}" hover-class="navigator-hover" class="weui-cell poem-item" wx:for="{{poems}}" wx:key="id">
+        <view class="poem-author"  style='text-align:left;font-size:16px;'>{{item.title}}</view>
+        
+        <view class="poem-title">{{item.dynasty+' | '+item.author}}</view>
+        <view class="poem-title">{{item.content}}</view>
+        <!-- <view class="weui-media-box__info badge-list" wx:if="{{is_search && item.tags.length>0}}">
+          <view class="weui-badge" wx:for="{{item.tags}}" wx:key="unique" wx-if='{{item ==_keyWord}}'>{{item}}</view>
+        </view> -->
+      </navigator>
+    </view>
+  </view>
+</view>

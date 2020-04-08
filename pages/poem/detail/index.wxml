@@ -1,0 +1,75 @@
+<!--pages/poem/detail/index.wxml-->
+<view class="page panel">
+  <view class="page__hd">
+    <view class="page__title">{{poem.title}}</view>
+    <view class="page__desc" wx:if='{{ poem.author_id>0}}'>{{(author.dynasty ? author.dynasty : poem.dynasty)+' | '}}
+      <navigator url='../../poet/detail/index?id={{poem.author_id}}' class="author-name active">{{(author.author_name ? author.author_name : poem.author)}}</navigator>
+    </view>
+    <view class="page__desc" wx:if='{{ poem.author_id<0}}'>{{(author.dynasty ? author.dynasty : poem.dynasty)+' | '}}
+      <view class="author-name">{{(author.author_name ? author.author_name : poem.author)}}</view>
+    </view>
+  </view>
+  <view class="page__bd page__content">
+    <view class="weui-panel">
+      <view class="weui-panel__bd">
+        <view class="weui-media-box weui-media-box_text">
+          <view class="weui-media-box__desc xu" wx:if="{{content.xu}}">{{content.xu}}</view>
+          <text decode='true' selectable='true' class="weui-media-box__title " wx:if="{{content.content.length>0}}" wx:for="{{content.content}}" wx:key="unique" wx:if='{{poem.type =="诗"}}'>{{item}}</text>
+          <text decode='true' selectable='true' class="weui-media-box__title wyw" wx:if="{{content.content.length>0}}" wx:for="{{content.content}}" wx:key="unique" wx:if='{{poem.type !="诗"}}'>{{item}}</text>
+
+          <view class='tag item' wx:if="{{tags.length>0}}">
+            <view class='title'>标签</view>
+            <view class='content_tags'>
+              <navigator url="/pages/poem/index/index?type=tag&keyWord={{item}}" hover-class="navigator-hover" class="poem-item tag" wx:for="{{tags}}" wx:key="*.this">
+                <!-- <view class="poem-item tag" wx:for="{{tags}}" wx:key="*.this"> -->
+                <view class="poem-title">{{item}}</view>
+                <!-- </view> -->
+              </navigator>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- <ad unit-id="adunit-1dc705dba430e05c"></ad> -->
+  <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+    <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">注释</view>
+    <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">翻译</view>
+    <view class="tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNav">赏析</view>
+    <view class="tab-item {{currentTab==3?'active':''}}" data-current="3" bindtap="swichNav">创作背景</view>
+    <!-- <view class="tab-item {{currentTab==4?'active':''}}" data-current="4" bindtap="swichNav">其它</view> -->
+  </scroll-view>
+  <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+    <swiper-item wx:for="{{[0,1,2,3]}}" wx:key='*this'>
+      <scroll-view scroll-y="true" class="scoll-h tab-list-content">
+        <block wx:for="{{tab_lists}}" wx:key="*this" wx:if="{{currentTab < 3}}">
+          <text decode='true' class='item yi' wx:if='{{ currentTab == 0}}'> {{item}}</text>
+          <text decode='true' class='item' wx:if='{{ currentTab != 0}}'>{{item}}</text>
+        </block>
+        <block wx:if="{{currentTab > 2 }}">
+          <text decode="true" class="item">{{poem.background }}</text>
+        </block>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+
+  <button class='share' open-type="share">
+    <image src='../../../images/tabBar2/share.png'></image>
+  </button>
+  <button class='audio' bindtap="audio">
+    <image src='../../../images/tabBar2/audio.png'></image>
+  </button>
+  <button class='return' bindtap="return">
+    <image src='../../../images/tabBar2/return.png'></image>
+  </button>
+  <!-- <view class="collect" bindtap="updateCollect">
+    <view class="collect-img" wx:if="{{!collect_status}}">
+      <image src="../../../images/icon/collect.png"></image>
+      <view class="text">收藏</view>
+    </view>
+    <view class="collect-img" wx:if="{{collect_status}}">
+      <image src="../../../images/icon/collect_active.png"></image>
+      <view class="text">已收藏</view>
+    </view>
+  </view> -->
+</view>

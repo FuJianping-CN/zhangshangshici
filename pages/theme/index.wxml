@@ -1,0 +1,37 @@
+<view class='all'>
+  <view class="workbench">
+    <view class='recommend'>热门推荐</view>
+    <view class='list'>
+      <view wx:for="{{theme_types}}" wx:key="id">
+        <view class="items">
+          <button size='mini' bindtap='selectByThemeAndType' id="{{item}}">{{item}}</button>
+        </view>
+      </view>
+      <view>
+      </view>
+    </view>
+    <text class='search' bindtap='searchSentenceBySelf'>自定义搜索</text>
+  </view>
+  <view class='divider'></view>
+
+
+
+  <!-- 查询的结果 -->
+  <view class="nav-breadcrumb weui-flex">
+    <view class="total">
+      有关 "{{selected_type}} " 的名句共查询到 {{total_pages}} 条结果 </view>
+  </view>
+  <!-- 查询的结果 -->
+  <view class="page list">
+    <view class="page__bd">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="poem-item" wx:for="{{poems}}" wx:key="id">
+          <view class="poem-title">{{item.title}}</view>
+          <navigator url="/pages/poem/detail/index?id={{item.poem_id}}" hover-class="navigator-hover" class="poem-author">{{'《'+item.poem_title +'》 | '+item.author}}
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

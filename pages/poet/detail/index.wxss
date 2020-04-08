@@ -1,0 +1,170 @@
+/* pages/poem/poet/detail/index.wxss */
+
+
+.page.list{
+    width: 100%;
+    background-color: inherit;
+    padding-top: 10px;
+}
+.home-content{
+    padding: 0
+}
+.navigator-hover{
+    background-color: #fff;
+    color: #337ab7;
+}
+.weui-cells {
+    font-size: 14px;
+    color: #666;
+}
+.weui-cell {
+    padding:8px 15px;
+}
+
+.weui-cells__title {
+  padding-left: 12px;
+  color: #8A2908;
+  background-color: #D8D8D8;
+}
+
+.list weui-cell_access{
+    font-size: 12px;
+}
+.poem-item{
+    display: block;
+}
+.poem-item view{
+    width:100%;
+    display: block;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+}
+.poem-item .poem-title{
+    color: #333;
+    font-size: 16px;
+}
+.poem-item .poem-author{
+    color: #777;
+    font-size: 14px;
+    padding: 5px 0;
+}
+.poem-item .poem-content{
+    font-size: 14px;
+    color: #454545;
+}
+.nav-list{
+    background: #fff;
+    width: 100%;
+}
+.nav-list .weui-flex__item{
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+    padding:8px 0;
+    color: #666;
+}
+.nav-list image{
+    width: 20px;
+    height: 20px;
+    vertical-align:middle;
+}
+.nav-list .left{
+    min-width: 60px;
+    text-align: right;
+}
+.nav-list .right{
+    text-align: left;
+    color: #337ab7;
+}
+.nav-breadcrumb{
+  margin-top: 0
+}
+.author_name {
+  text-align: center;
+}
+.author_name,.title,.profile{
+  padding: 5px 15px;
+}
+.title {
+  color:#8A2908;
+  background-color: #D8D8D8;
+}
+.profile{
+  display: block;
+  font-size: 14px;
+  color: rgb(68, 65, 65);
+  text-align: justify;
+}
+.author_avatar{
+  text-align:center;
+  margin:0 auto;
+  margin-top:15px
+}
+.author_avatar image{
+  width:105px;
+  height:150px;
+}
+.collect{
+  position: fixed;
+  bottom: 0;
+  left:0;
+  padding:5px 0 5px 15px;
+  font-size:14px;
+  border-top:1px solid #f5f5f5;
+  width:100%;
+  opacity: 0.8;
+  background-color:#fff;
+}
+
+.divider {
+  border-bottom:12px solid #F2F2F2;
+  padding:8px;
+  display:flex;
+  flex-direction:row;
+}
+
+.collect-img image{
+  height: 24px;
+  width:24px;
+  vertical-align: bottom
+}
+.collect-img .text{
+  display: inline-block;
+  line-height: 24px;
+  padding-left: 5px;
+}
+.collect-img .text.active{
+  color: #337ab7;
+}
+
+.return{
+  /* background-color:#337ab7; */
+  position:fixed;
+  right: 100px;
+  padding:8px;
+  border-radius:100%;
+  bottom:50px;
+  font-size: 11px;
+  color: white;
+}
+.return image{
+  width:30px;
+  height:30px;
+  display:block;
+}
+.share{
+    /* background-color:#337ab7; */
+    position:fixed;
+    right: 40px;
+    padding:8px;
+    border-radius:100%;
+    bottom:50px;
+    font-size: 11px;
+    color: white;
+}
+.share image{
+    width:30px;
+    height:30px;
+    display:block;
+}

@@ -1,0 +1,10 @@
+<!-- 
+<text>\n\n</text>
+<view class='login'>
+  <button type="primary" size="default" bindtap="bindlogin"> 登录 </button>
+</view>
+<text>\n\n</text> -->
+<view class="cells">
+  <navigator url='/pages/preduce/preduce' class="item">关于小程序</navigator>
+  <navigator url='/pages/developer/developer' class="item">关于开发者</navigator>
+</view>

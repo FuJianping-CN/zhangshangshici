@@ -1,0 +1,85 @@
+/* pages/search/index.wxss */
+.container{
+  padding: 10px 0;
+}
+@import "../../wxSearchView/wxSearchView.wxss";
+/* @import "../../style/content_list.wxss"; */
+page{
+  background-color: #efeff4;
+  overflow:hidden;
+  clear:both;
+  position:relative;
+  min-height:100%;
+}
+.item{
+  margin-bottom: 10px;
+  background-color: #fff;
+  padding-top: 10px;
+  overflow: hidden;
+}
+.item .title{
+  padding-left: 10px;
+  color: #999;
+  border-bottom:1px solid #ddd;
+}
+.search-result{
+  background-color: #efeff4;
+}
+.item .weui-cell__bd{
+  position: relative;
+  padding-left: 25px;
+  font-size: 14px;
+  color: #337ab7;
+}
+.item .weui-cell .weui-icon-search_in-box{
+  top: 3px;
+  left: 0;
+}
+.item .poem-item.tag .poem-title{
+  color: #fff;
+}
+.poem-item{
+  display: block;
+  padding: 5px 10px;
+}
+.item .poem-item.tag {
+  display: inline-block;
+  background-color: #09bb07;
+  color: #fff;
+  border-radius: 12px;
+  padding: 2px 10px;
+  margin: 5px 5px;
+}
+.poem-item.sentence .poem-author{
+  display: block;
+  text-align: right;
+}
+.poem-item view{
+    width:100%;
+    display: block;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+}
+.poem-item .poem-title{
+    color: #333;
+    font-size: 14px;
+}
+.poem-item .poem-profile{
+    color: #666;
+    font-size: 12px;
+}
+.poem-item .poem-title:first-child{
+    overflow: inherit;
+}
+.poem-item .poem-author{
+    color: #999;
+    font-size: 12px;
+    display: inline-block;
+    overflow: inherit;
+    /* padding: 5px 0; */
+}
+.poem-item .poem-content{
+    font-size: 14px;
+    color: #454545;
+}

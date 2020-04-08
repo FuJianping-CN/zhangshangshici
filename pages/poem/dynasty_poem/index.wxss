@@ -1,0 +1,49 @@
+/* pages/poem/index/index.wxss */
+
+@import "../../../style/content_list.wxss";
+
+.workbench {
+  font-size: 30rpx;
+  background: #fff;
+  padding-top: 30rpx;
+  margin-bottom: 10rpx;
+  color: #333;
+}
+
+.workbench .list {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  width: 100%;
+  flex-flow: row wrap;
+}
+
+.workbench .items {
+  width: 160rpx;
+  flex: 1;
+  text-align: center;
+}
+
+.workbench .items text {
+  display: block;
+  text-align: center;
+  margin-top: 10rpx;
+}
+
+.divider {
+  border-bottom: 12px solid #f2f2f2;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.recommend {
+  padding-bottom: 20px;
+}
+
+.dividerLine {
+  border-bottom:1px solid #E6E6E6;
+  padding:5px;
+  display:flex;
+  flex-direction:row;
+}

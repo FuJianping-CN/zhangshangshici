@@ -1,0 +1,19 @@
+<!--pages/poem/poet/index/index.wxml-->
+<view class="home-content">
+  <view class="nav-breadcrumb weui-flex">
+    <view class="item total">共查询到{{dynasty}}名家{{total}} 条结果</view>
+  </view>
+  <view class='divider'></view>
+
+  <view class="page list">
+    <view class="page__bd">
+      <navigator url="/pages/poet/detail/index?id={{item.id}}" hover-class="navigator-hover" class="weui-cell poem-item" wx:for="{{poets}}" wx:key="idx">
+        <view class="poem-author" style='text-align:left;font-size:16px;'>{{item.author_name}}</view>
+        <view class="poem-title">{{item.dynasty}}</view>
+        <view class="poem-title">{{item.profile}}</view>
+        <view class='divider'></view>
+      </navigator>
+    </view>
+  </view>
+
+</view>

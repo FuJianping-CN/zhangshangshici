@@ -1,0 +1,43 @@
+.item{
+  margin-bottom: 10px;
+  background-color: #fff;
+  padding-top: 10px;
+  overflow: hidden;
+}
+.item .title{
+  padding-left: 13px;
+  color: #999;
+  border-bottom:1px solid #ddd;
+}
+.item .poem-item.tag .poem-title{
+  color: #fff;
+}
+.poem-item{
+  display: block;
+  padding: 5px 10px;
+}
+.item .poem-item.tag {
+  display: inline-block;
+  background-color: #09bb07;
+  color: #fff;
+  border-radius: 12px;
+  padding: 2px 10px;
+  margin: 5px 5px;
+}
+.poem-item view{
+    width:100%;
+    display: block;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+}
+
+
+  /* <view class='tag item'>
+    <view class='title'>类型</view>
+    <view class='content_tags'>
+      <navigator url="" hover-class="navigator-hover" class="poem-item tag" wx:for="{{tags}}" wx:key="*.this">
+        <view class="poem-title">{{item}}</view>
+      </navigator>
+    </view>
+  </view> */
